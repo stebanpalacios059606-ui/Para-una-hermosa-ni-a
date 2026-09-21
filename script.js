@@ -4,6 +4,7 @@ const intro = document.querySelector(".intro");
 const message = document.getElementById("message");
 const petals = document.getElementById("petals");
 const sparkles = document.getElementById("sparkles");
+const musica = document.getElementById("musica");
 
 function makePetal() {
   const petal = document.createElement("div");
@@ -30,6 +31,8 @@ function sparkleBurst() {
 }
 
 function openGift() {
+  musica.volume = 0.8;
+  musica.play().catch(() => {});
   intro.classList.add("hidden");
   message.classList.remove("hidden");
   sparkleBurst();
