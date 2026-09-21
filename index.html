@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1c1123">
   <title>Para Beatriz 🌻</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="sky"></div>
@@ -15,7 +16,7 @@
       <p class="small">Un pequeño detalle para ti</p>
       <h1>Hola, Beatriz ❤️</h1>
       <p class="subtitle">Hay detalles que no se pueden tocar,<br>pero sí se pueden sentir.</p>
-      <button id="openBtn">Abrir mi detalle 🌻</button>
+      <button id="openBtn" type="button">Abrir mi detalle 🌻</button>
     </div>
 
     <section id="message" class="message hidden">
@@ -28,31 +29,25 @@
       </div>
 
       <p>Hola niña hermosa ❤️</p>
-      <p>
-        Este día no te mando algo que puedas tocar,
-        pero sí algo que puedes ver y guardar.
-      </p>
-      <p>
-        No te conozco mucho todavía,
-        pero te lo mando con todo mi corazón. ❤️
-      </p>
+      <p>Este día no te mando algo que puedas tocar, pero sí algo que puedes ver y guardar.</p>
+      <p>No te conozco mucho todavía, pero te lo mando con todo mi corazón. ❤️</p>
 
       <div class="divider">🌼 🌻 🌼</div>
 
-      <p class="wish">Espero que estas flores te regalen una sonrisa<br>
-      y hagan un poquito más bonito tu día. ✨</p>
-
+      <p class="wish">Espero que estas flores te regalen una sonrisa<br>y hagan un poquito más bonito tu día. ✨</p>
       <p class="signature">wălt stĕb</p>
-
-      <button id="againBtn" class="again">Ver otra vez 🌻</button>
+      <button id="againBtn" class="again" type="button">Ver otra vez 🌻</button>
     </section>
   </main>
 
   <div id="petals"></div>
   <div id="sparkles"></div>
 
-  <audio id="musica" preload="auto" loop><source src="musica.mp3" type="audio/mpeg"></audio>
+  <audio id="musica" preload="none" loop>
+    <source src="./musica.mp3" type="audio/mpeg">
+  </audio>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
+  <noscript><p style="position:fixed;bottom:10px;left:0;right:0;text-align:center;color:white">Activa JavaScript para abrir el detalle 🌻</p></noscript>
 </body>
 </html>
