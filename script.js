@@ -7,6 +7,7 @@ const sparkles = document.getElementById("sparkles");
 const musica = document.getElementById("musica");
 
 function makePetal() {
+  if (!petals) return;
   const petal = document.createElement("div");
   petal.className = "petal";
   petal.textContent = Math.random() > 0.5 ? "🌼" : "🌻";
@@ -19,36 +20,37 @@ function makePetal() {
 }
 
 function sparkleBurst() {
+  if (!sparkles) return;
   for (let i = 0; i < 28; i++) {
     const s = document.createElement("span");
     s.className = "spark";
     s.style.left = (35 + Math.random() * 30) + "vw";
     s.style.top = (30 + Math.random() * 35) + "vh";
-    s.style.animationDelay = Math.random() * .8 + "s";
+    s.style.animationDelay = Math.random() * 0.8 + "s";
     sparkles.appendChild(s);
     setTimeout(() => s.remove(), 2800);
   }
 }
 
 function openGift() {
-  musica.volume = 0.8;
-  musica.play().catch(() => {});
-  intro.classList.add("hidden");
-  message.classList.remove("hidden");
-  sparkleBurst();
-  for (let i = 0; i < 16; i++) {
-    setTimeout(makePetal, i * 130);
+  if (musica) {
+    musica.volume = 0.8;
+    musica.play().catch(() => {});
   }
+  intro?.classList.add("hidden");
+  message?.classList.remove("hidden");
+  sparkleBurst();
+  for (let i = 0; i < 16; i++) setTimeout(makePetal, i * 130);
 }
 
 function showIntro() {
-  message.classList.add("hidden");
-  intro.classList.remove("hidden");
+  message?.classList.add("hidden");
+  intro?.classList.remove("hidden");
 }
 
-openBtn.addEventListener("click", openGift);
-againBtn.addEventListener("click", showIntro);
+openBtn?.addEventListener("click", openGift);
+againBtn?.addEventListener("click", showIntro);
 
 setInterval(() => {
-  if (!message.classList.contains("hidden")) makePetal();
+  if (message && !message.classList.contains("hidden")) makePetal();
 }, 900);
