@@ -12,8 +12,8 @@ body {
   overflow-x: hidden;
   font-family: Georgia, "Times New Roman", serif;
   background:
-    radial-gradient(circle at 50% 15%, rgba(255, 220, 95, .35), transparent 28%),
-    linear-gradient(160deg, #24152d 0%, #402043 45%, #171526 100%);
+    linear-gradient(rgba(20, 10, 25, .58), rgba(20, 10, 25, .72)),
+    url("niña.jpg") center center / cover no-repeat fixed;
   color: #fff8e7;
   display: flex;
   justify-content: center;
@@ -221,7 +221,11 @@ button:active {
 }
 
 @media (max-width: 430px) {
-  body { padding: 12px; }
+  body {
+    padding: 12px;
+    background-attachment: scroll;
+    background-position: center center;
+  }
   .card { padding: 28px 17px 24px; border-radius: 25px; }
   .flower { font-size: 51px; }
   .f3 { font-size: 63px; }
